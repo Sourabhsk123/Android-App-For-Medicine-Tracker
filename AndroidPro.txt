@@ -1,0 +1,126 @@
+Android manifest
+The manifest file describes essential information about your app such as Android build tools, the Android operating system, and Google Play, permissions, 
+and other activities.
+
+Android SDK
+The Android Software Development Kit (SDK) is a crucial part of Android development, It consists of tools like emulator etc and also libraries for code for making 
+Java programs work with the Android platform.
+
+
+What is Gradle in Android
+3rd party dependencies, main configuration of the app and other configurations of the app are stored.
+a gradle takes all the source files (java and XML) and converts and compress all of them into one single file known as apk(Android Application Package)
+There are two types of build.gradle scripts
+Top-level build.gradle ------------ define the build configurations that will be applied to all the modules in the project. contain buildscripts and allprojects
+Module-level build.gradle --------- all the dependencies are defined and where the sdk versions are declared. contains android build types, sdk version etc.
+
+
+Activity
+An Android activity is one screen of the Android app's user interface. Activity is the part where the user will interacts with your application
+
+
+Fragment
+Fragment represents a behavior or a portion of user interface in an Activity.
+
+
+Intents
+Intents often describe the action which should be performed and provide data upon which such an action should be done.
+Intent are used for communicating between the Application components and it also provides the connectivity between two apps.
+For example: Intent facilitate you to redirect your activity to another activity on occurrence of any event. By calling, startActivity() you can perform this task.
+
+
+Shared Preferences 
+Shared Preferences is the way in which one can store and retrieve small amounts of primitive data as key/value pairs to a file on the device storage 
+such as String, int, float, Boolean that make up your preferences in an XML file inside the app on the device storage.
+
+
+Views
+View is the base class for widgets, which are used to create interactive UI components like buttons, text fields, etc
+
+
+Oncreate
+onCreate(Bundle) is where you initialize your activity. When Activity is started and application is not loaded, then both onCreate() methods will be called. 
+But for subsequent starts of Activity , the onCreate() of application will not be called.
+onCreateViewHolder(ViewGroup, int)This method is called right when the adapter is created and is used to initialize your ViewHolder(s).
+Called by RecyclerView to display the data at the specified position. abstract VH. onCreateViewHolder(ViewGroup parent, int viewType) 
+Called when RecyclerView needs a new RecyclerView. ViewHolder of the given type to represent an item.
+
+OnclickListener
+In Android, the OnClickListener() interface has an onClick(View v) method that is called when the view (component) is clicked. 
+
+Adaptor
+In Android, Adapter is a bridge between UI component and data source that helps us to fill data in UI component. It holds the data and send the data to an 
+Adapter view then view can takes the data from the adapter view and shows the data on different views like as ListView, GridView, Spinner etc.
+
+
+RecyclerView
+The RecyclerView widget is a more advanced and flexible version of ListView.
+In the RecyclerView model, several different components work together to display your data.
+The overall container for your user interface is a RecyclerView object that you add to your layout
+
+
+getitemCount
+getItemCount returns the total number of items in your RecyclerView and getViewType is called with values
+
+
+
+Onbind
+onBindViewHolder(VH holder, int position) Called by RecyclerView to display the data at the specified position. void. 
+onBindViewHolder(VH holder, int position, List<Object> payloads) Called by RecyclerView to display the data at the specified position.
+
+
+model class
+You can model your data in Android using standard Java design patterns. The class is designed to store data in private fields, members of the class, 
+and to make that data accessible to the rest of the application through setter and getter methods.
+
+
+utilityclass
+Utility class is used because it does not belong to any other thing in the android.Utility Class, also known as Helper class, is a class, 
+which contains just static methods, it is stateless and cannot be instantiated. It contains a bunch of related methods, so they can be reused across the application. 
+As an example consider firebaseotp authentication and prefManager, it does not belong to any other objects than itself in android.
+
+
+Preferences
+Preferences in Android are used to keep track of application and user preferences. In any application, there are default preferences that can accessed 
+through the PreferenceManager instance and its related method getDefaultSharedPreferences(Context). Preferences are stored as groups of key/value pairs 
+and are available  at the Activity level or shared across all of Activity classes for a given application (but not outside of the application package).
+
+
+
+What is broadcast receiver in android?
+A broadcast receiver (receiver) is an Android component which allows you to register for system or application events. 
+All registered receivers for an event are notified by the Android runtime once this event happens.Android BroadcastReceiver is a 
+dormant component of android that listens to system-wide broadcast events or intents. 
+When any of these events occur it brings the application into action by either creating a status bar notification or performing a task
+
+
+OnMapRreadyCallback: This callback interface invokes when it instance is set on MapFragment object. The onMapReady(GoogleMap) method of OnMapReadyCallback 
+interface is called when the map is ready to used. 
+In the onMapReady(GoogleMap) method we can add markers, listeners and other attributes.
+
+
+LocationListener: This interface is used to receive notification when the device location has changed. 
+The abstract method of LocationListener onLocationChanged(Location) is called when the location has changed.
+
+
+GoogleApiClient.ConnectionCallbacks: This interface provide callbacks methods onConnected(Bundle) and onConnectionSuspended(int) 
+which are called when the device is to connected and disconnected.
+
+
+GoogleApiClient.OnConnectionFailedListener: This interface provide callbacks method onConnectionFailed(ConnectionResult) 
+which is called when there was an error in connecting the device to the service.
+
+What does onReceive () mean?
+Whenever the event for which the receiver is registered occurs, onReceive() is called. 
+For instance, in case of battery low notification, the receiver is registered to Intent.
+
+Viewpager Adoptor
+Layout manager that allows the user to flip left and right through pages of data. 
+You supply an implementation of a PagerAdapter to generate the pages that the view shows.
+
+
+extends
+The extends keyword extends a class (indicates that a class is inherited from another class). 
+In Java, it is possible to inherit attributes and methods from one class to another.
+
+
